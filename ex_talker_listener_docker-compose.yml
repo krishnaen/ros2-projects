@@ -1,0 +1,24 @@
+services:
+  # Component 1: Talker Node
+  ros2-talker:
+    image: osrf/ros:jazzy-desktop
+    container_name: talker_node
+    network_mode: host
+    pid: host
+    ipc: host
+    environment:
+      - ROS_DOMAIN_ID=0
+    command: bash -c "source /opt/ros/jazzy/setup.bash && ros2 run demo_nodes_cpp talker"
+    restart: always
+
+  # Component 2: Listener Node
+  ros2-listener:
+    image: osrf/ros:jazzy-desktop
+    container_name: listener_node
+    network_mode: host
+    pid: host
+    ipc: host
+    environment:
+      - ROS_DOMAIN_ID=0
+    command: bash -c "source /opt/ros/jazzy/setup.bash && ros2 run demo_nodes_py listener"
+    restart: always
