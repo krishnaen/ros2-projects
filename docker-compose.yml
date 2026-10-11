@@ -6,7 +6,7 @@ services:
     build:
       context: ./src/my_py_pkg    # Points directly to the package folder
       dockerfile: Dockerfile
-    image: yourusername/my-py-pkg:latest
+    image: ghcr.io/krishnaen/ros2-project/my-py-pkg:latest
     container_name: ros2_py_node
     network_mode: host
     pid: host
