@@ -15,14 +15,14 @@ services:
       - ROS_DOMAIN_ID=0
 
   # Service 2: Your Future C++ Package
-  cpp-app:
-    build:
-      context: ./src/my_cpp_pkg   # Points directly to the C++ package folder
-      dockerfile: Dockerfile
-    image: yourusername/my-cpp-pkg:latest
-    container_name: ros2_cpp_node
-    network_mode: host
-    pid: host
-    ipc: host
-    environment:
-      - ROS_DOMAIN_ID=0
+#  cpp-app:
+#    build:
+#      context: ./src/my_cpp_pkg   # Points directly to the C++ package folder
+#      dockerfile: Dockerfile
+#    image: yourusername/my-cpp-pkg:latest
+#    container_name: ros2_cpp_node
+#    network_mode: host
+#    pid: host
+#    ipc: host
+#    environment:
+#      - ROS_DOMAIN_ID=0
